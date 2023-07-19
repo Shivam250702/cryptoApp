@@ -28,7 +28,7 @@ const Header = () => {
   const classes=useStyles();
   
   const darkTheme=createTheme({
-    pallete: {
+    palette: {
       primary: {
         main: "#fff",
       },

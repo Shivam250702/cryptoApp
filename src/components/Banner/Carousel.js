@@ -1,5 +1,6 @@
 import { makeStyles } from '@material-ui/core'
-import axios from 'axios'
+import axios from 'axios';
+import Pagination from '@mui/material/Pagination';
 import React, { useEffect, useState } from 'react'
 import { Cryptostate } from '../../CryptoContext'
 import { TrendingCoins} from '../../config/api'
