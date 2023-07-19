@@ -20,7 +20,18 @@ import {
 } from "@material-ui/core";
 import Pagination from '@mui/material/Pagination';
 import { Navigate, useNavigate } from 'react-router-dom';
- function  numberWithCommas(x) {
+
+// webpack.config.js (for webpack 4 or older)
+export const config = {
+  // Other webpack configuration options...
+  node: {
+    // Add 'buffer' polyfill as a fallback
+    "buffer": true,
+  },
+};
+
+
+export function  numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 const useStyles = makeStyles({
@@ -65,7 +76,7 @@ const CoinsTable = () => {
     useEffect(() => {
       fetchCoins()
     }, [currency])
-    const handleSearch = () => {
+   const handleSearch = () => {
       return coins.filter(
         (coin) =>
           coin.name.toLowerCase().includes(search) ||
@@ -200,4 +211,4 @@ const CoinsTable = () => {
   );
 }
 
-export default CoinsTable;
+export default CoinsTable

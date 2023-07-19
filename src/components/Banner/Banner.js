@@ -22,7 +22,7 @@ tagline: {
 
 }))
 const Banner = () => {
-    const classes=useStyles()
+    const classes=useStyles();
   return (
     <div className={classes.banner}>
     <Container className={classes.bannerContent}>
