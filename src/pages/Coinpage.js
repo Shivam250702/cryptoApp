@@ -92,7 +92,8 @@ const fetchCoin = async () => {
           {coin?.name}
         </Typography>
         <Typography variant="subtitle1" className={classes.description}>
-          {ReactHtmlParser(coin?.description.en.split(". ")[0])}.
+          {ReactHtmlParser(coin?.description.en.split(". ")[0])}. 
+          {/* <!-- Whenever fullstop comes here it will split up--> */}
         </Typography>
         <div className={classes.marketData}>
           <span style={{ display: "flex" }}>
