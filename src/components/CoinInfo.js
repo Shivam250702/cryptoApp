@@ -5,7 +5,8 @@ import { HistoricalChart } from '../config/api';
 import axios from 'axios';
 import { CircularProgress, createTheme, makeStyles } from '@material-ui/core';
 import { ThemeProvider } from 'styled-components';
-import { Line } from "react-chartjs-2";
+import { Line } from 'react-chartjs-2';
+
 import SelectButton from './SelectButton';
 import { chartDays } from "../config/data";
 
@@ -43,7 +44,8 @@ const CoinInfo = ({coin}) => {
   },
   }));
   return (
-<ThemeProvider theme={darkTheme}>
+
+  /* <ThemeProvider theme={darkTheme}>
   <div className="classes container">
 {
   !historicdata?(
@@ -100,8 +102,10 @@ const CoinInfo = ({coin}) => {
           </>
         )}
       </div>
-    </ThemeProvider>
-  );
+    </ThemeProvider> */
+ <div> 
+ Hello world
+ </div> );
 };
 
 export default CoinInfo;

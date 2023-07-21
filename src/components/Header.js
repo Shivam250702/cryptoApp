@@ -2,7 +2,7 @@ import { AppBar, MenuList, createTheme, makeStyles } from '@material-ui/core';
 import { Typography } from '@material-ui/core';
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+
 import { MenuItem } from '@mui/material';
 
 import FormControl from '@mui/material/FormControl';
@@ -38,6 +38,7 @@ const Header = () => {
   const {currency,setcurrency}=Cryptostate()
 
 console.log(currency);
+
   return (
     <ThemeProvider theme={darkTheme}> 
    
@@ -51,10 +52,12 @@ console.log(currency);
 <Typography className={classes.title}>
 {/* used when we add text or something */}
   Crypto Admirer
-  <Select labelId="demo-simple-select-label" id="demo-simple-select" variant="outlined" style={{ width: 100,height: 40,marginLeft: 25}} value={currency} label="currency" onChange={(e)=>setcurrency(e.target.value)} > 
+
+  <Select labelId="demo-simple-select-label" id="demo-simple-select" variant="outlined" style={{ color:"white",width: 100,height: 40,marginLeft: 25}} value={currency} label="currency" onChange={(e)=>setcurrency(e.target.value)} > 
   <MenuItem value={"USD"}>USD</MenuItem>                  
                   <MenuItem value={"INR"}>INR</MenuItem> 
                   </Select>
+       
 </Typography>
 </toolbar>
 
