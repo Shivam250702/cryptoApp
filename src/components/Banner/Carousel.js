@@ -33,13 +33,12 @@ const Carousel = () => {
     const {currency,symbol}=Cryptostate();
     const fetchTrendingCoins=async()=>{
    const {data}=await axios.get(TrendingCoins(currency));
-
    settrending(data);
     };
     console.log(trending);
     useEffect(()=>{
     fetchTrendingCoins();
-    },[currency])
+    },[])
 
     const items=trending.map((coin)=>{
         let profit =coin.price_change_percentage_24h>=0

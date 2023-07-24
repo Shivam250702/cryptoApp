@@ -47,11 +47,12 @@ console.log(currency);
      {/* creates an appbar  */}
 <container>  
 {/* gives responsiveness */}
-<toolbar>
+<toolbar >
 {/* create a toolbar */}
-<Typography className={classes.title}>
+<Typography style={{"display":"flex","justifyContent":"space-between"}} className={classes.title}>
 {/* used when we add text or something */}
-  Crypto Admirer
+<div>Crypto Admirer</div>
+  
 
   <Select labelId="demo-simple-select-label" id="demo-simple-select" variant="outlined" style={{ color:"white",width: 100,height: 40,marginLeft: 25}} value={currency} label="currency" onChange={(e)=>setcurrency(e.target.value)} > 
   <MenuItem value={"USD"}>USD</MenuItem>                  
