@@ -11,6 +11,7 @@ import Select from '@mui/material/Select';
 import { Navigate, useNavigate } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components';
 import { Cryptostate } from '../CryptoContext';
+import AuthModal from './Authentication/AuthModal';
 const useStyles=makeStyles(()=>({
 title: {
   flex: 1,
@@ -37,7 +38,7 @@ const Header = () => {
   });
   const {currency,setcurrency}=Cryptostate()
 
-console.log(currency);
+
 
   return (
     <ThemeProvider theme={darkTheme}> 
@@ -58,8 +59,10 @@ console.log(currency);
   <MenuItem value={"USD"}>USD</MenuItem>                  
                   <MenuItem value={"INR"}>INR</MenuItem> 
                   </Select>
-       
+                  
+                  <AuthModal style={{align:"right"}}/ >
 </Typography>
+
 </toolbar>
 
 

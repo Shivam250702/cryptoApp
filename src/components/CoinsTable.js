@@ -50,20 +50,15 @@ const useStyles = makeStyles({
   },
 });
 const CoinsTable = () => {
-    const [coins, setcoins] = useState([]);
-    const [loading, setloading] = useState(false);
+
     const [search, setSearch] = useState("");
     const [page, setPage] = useState(1);
-    const { currency, symbol } = Cryptostate();
+
+    const {currency,symbol,coins,loading,fetchCoins}=Cryptostate();
     
     const classes = useStyles();
     const navigate = useNavigate();
-    const fetchCoins=async()=>{
-        setloading(true);
-        const {data} =await axios.get(CoinList(currency));
-        setcoins(data);
-        setloading(false);
-    }
+   
     
     const darkTheme = createTheme({
       palette: {
