@@ -9,21 +9,23 @@ import { SingleCoin } from "../config/api";
 import { numberWithCommas } from "../components/CoinsTable";
 import { Cryptostate } from '../CryptoContext';
 
-const Coinpage = () => {
-  
-const {id}= useParams();
-const [coin,setcoins]=useState();
-      
-const { currency, symbol } = Cryptostate();
-const fetchCoin = async () => {
-  const { data } = await axios.get(SingleCoin(id));
+const CoinPage = () => {
+  const { id } = useParams();
+  const [coin, setCoin] = useState();
 
-    setcoins(data);
+  const { currency, symbol } = Cryptostate();
+
+  const fetchCoin = async () => {
+    const { data } = await axios.get(SingleCoin(id));
+
+    setCoin(data);
   };
+
   useEffect(() => {
     fetchCoin();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
   const useStyles = makeStyles((theme) => ({
     container: {
       display: "flex",
@@ -92,8 +94,7 @@ const fetchCoin = async () => {
           {coin?.name}
         </Typography>
         <Typography variant="subtitle1" className={classes.description}>
-          {ReactHtmlParser(coin?.description.en.split(". ")[0])}. 
-          {/* <!-- Whenever fullstop comes here it will split up--> */}
+          {ReactHtmlParser(coin?.description.en.split(". ")[0])}.
         </Typography>
         <div className={classes.marketData}>
           <span style={{ display: "flex" }}>
@@ -155,4 +156,4 @@ const fetchCoin = async () => {
   );
 };
 
-export default Coinpage;
+export default CoinPage;
