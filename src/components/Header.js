@@ -52,7 +52,9 @@ const Header = () => {
 {/* create a toolbar */}
 <Typography style={{"display":"flex","justifyContent":"space-between"}} className={classes.title}>
 {/* used when we add text or something */}
-<div>Crypto Admirer</div>
+<div style={{
+  fontSize: 19
+}}>Crypto Admirer</div>
   
 
   <Select labelId="demo-simple-select-label" id="demo-simple-select" variant="outlined" style={{ color:"white",width: 100,height: 40,marginLeft: 25}} value={currency} label="currency" onChange={(e)=>setcurrency(e.target.value)} > 
