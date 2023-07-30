@@ -60,7 +60,7 @@ const Header = () => {
                   <MenuItem value={"INR"}>INR</MenuItem> 
                   </Select>
                   
-                  <AuthModal style={{align:"right"}}/ >
+                
 </Typography>
 
 </toolbar>
