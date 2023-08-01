@@ -53,12 +53,12 @@ const Header = () => {
 <Typography style={{"display":"flex","justifyContent":"space-between"}} className={classes.title}>
 {/* used when we add text or something */}
 <div style={{
-  fontSize: 19
+  fontSize: 32
 }}>Crypto Admirer</div>
   
 
-  <Select labelId="demo-simple-select-label" id="demo-simple-select" variant="outlined" style={{ color:"white",width: 100,height: 40,marginLeft: 25}} value={currency} label="currency" onChange={(e)=>setcurrency(e.target.value)} > 
-  <MenuItem value={"USD"}>USD</MenuItem>                  
+  <Select labelId="demo-simple-select-label"  id="demo-simple-select" variant="outlined" style={{ color:"white",width: 100,height: 40,marginLeft: 25 ,justifyContent:"center"}} value={currency} label="currency" onChange={(e)=>setcurrency(e.target.value)} > 
+  <MenuItem value={"USD"} >USD</MenuItem>                  
                   <MenuItem value={"INR"}>INR</MenuItem> 
                   </Select>
                   
